@@ -351,6 +351,31 @@ footer button {
 .field:focus {
   border-color: var(--blue);
 }
+.phone-field {
+  display: flex;
+  align-items: stretch;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--surface);
+  overflow: hidden;
+}
+.phone-field:focus-within {
+  border-color: var(--blue);
+}
+.phone-field > span {
+  display: flex;
+  align-items: center;
+  padding: 0 14px;
+  border-right: 1px solid var(--line);
+  background: var(--soft);
+  color: var(--ink);
+  font-weight: 500;
+  white-space: nowrap;
+}
+.phone-field .field {
+  border: 0;
+  border-radius: 0;
+}
 .field.invalid {
   border-color: var(--danger);
 }
@@ -387,7 +412,7 @@ footer button {
 }
 .presets {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 9px;
 }
 .presets button {
@@ -449,12 +474,13 @@ footer button {
   padding: 28px;
   position: sticky;
   top: 25px;
+  font-weight: 400;
 }
 .summary .sum-amount {
   font-size: 42px;
   letter-spacing: -1.7px;
   margin: 28px 0 8px;
-  font-weight: 600;
+  font-weight: 450;
   overflow-wrap: anywhere;
 }
 .summary .sum-amount span {
@@ -483,7 +509,9 @@ footer button {
   text-align: right;
   max-width: 170px;
   overflow-wrap: anywhere;
+  font-weight: 400;
 }
+.summary-bottom strong { font-weight: 500; }
 .summary-bottom {
   background: var(--soft);
   border-radius: 12px;
