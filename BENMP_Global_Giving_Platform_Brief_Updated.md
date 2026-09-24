@@ -1359,3 +1359,14 @@ Treat **Give** as the primary public navigation action by placing it on a solid 
 ## Header-to-hero transition
 
 On the homepage, allow the moving hero to extend behind the BENMP / Healing Jesus Campaign header. The header background begins opaque at the top and becomes progressively transparent toward the bottom so it blends into the video without a hard line. Preserve the hero’s long black fade at the bottom.
+
+# 41. Email-First Donor Recognition — 24 September 2026
+
+For a signed-out donor, the step after choosing an amount begins with one field: **Email / BENMP ID**. Match the address to a BENMP profile before requesting any other personal details.
+
+- If the email is recognized, show a green confirmation reading **Welcome back** and allow the donor to continue directly to Payment using the matched profile.
+- If the email is not recognized, reveal **Full name** and **Phone / WhatsApp** immediately beneath the email on the same page. Do not add another details screen.
+- Keep a very small review control labelled **Test view** with Returning and New states so reviewers can exercise both outcomes.
+- If the donor is already signed in, skip the details step entirely. The journey becomes Donation followed directly by Payment, and the progress indicator should show those two steps only.
+
+Keep the homepage header at its original height. Its background gradient must remain within that height and use a smooth, subtle opacity transition into the hero video rather than an extended pale band.
