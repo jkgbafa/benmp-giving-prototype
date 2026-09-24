@@ -1873,12 +1873,13 @@ body[data-view="home"] header::before {
   background: linear-gradient(
     to bottom,
     rgba(var(--fade-rgb), .99) 0%,
-    rgba(var(--fade-rgb), .99) 30%,
-    rgba(var(--fade-rgb), .91) 43%,
-    rgba(var(--fade-rgb), .72) 58%,
-    rgba(var(--fade-rgb), .48) 72%,
-    rgba(var(--fade-rgb), .24) 86%,
-    rgba(var(--fade-rgb), .08) 95%,
+    rgba(var(--fade-rgb), .99) 18%,
+    rgba(var(--fade-rgb), .94) 31%,
+    rgba(var(--fade-rgb), .82) 45%,
+    rgba(var(--fade-rgb), .64) 59%,
+    rgba(var(--fade-rgb), .42) 73%,
+    rgba(var(--fade-rgb), .22) 85%,
+    rgba(var(--fade-rgb), .08) 94%,
     rgba(var(--fade-rgb), 0) 100%
   );
   pointer-events: none;

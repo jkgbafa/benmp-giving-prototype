@@ -1378,3 +1378,7 @@ Use **Donate** for the prominent orange action in both the public header and the
 ## Header fade range
 
 Keep the homepage header’s layout height unchanged. Extend only its visual background overlay across the top of the hero. Hold the header background nearly solid from 0–30%, then fade its opacity smoothly from 30–100% without a blur filter or a visible horizontal boundary.
+
+## Earlier header fade
+
+Match the approved homepage reference by beginning the header-to-video transparency transition earlier. Hold the solid header background only through approximately 18–20%, then fade continuously through 100% of the overlay.
