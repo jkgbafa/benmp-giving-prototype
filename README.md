@@ -2,7 +2,7 @@
 
 Browser-local demonstration. No real payments, sign-in emails or external messages are sent. Use sample information.
 
-Features: hero with Give and Become a BENMP partner; 249 countries/territories and illustrative local payment routes; custom amounts/currencies; individual and organization gifts; monthly plans; saved/email-only/first-time details; permissive Joshua GBAFA demo sign-in; received/pending/failed payment states; downloadable acknowledgments and CSV; edit/pause/resume/cancel monthly plans; simulated installments and reminders; country totals separated by currency; message previews, replies and notification preferences; light, dark and extra-simple modes.
+Features: hero with Give and Become a BENMP partner; 243 available countries/territories; Cuba, Iran, North Korea, Syria, Russia and Belarus are omitted and illustrative local payment routes; custom amounts/currencies; individual and organization gifts; monthly plans; saved/email-only/first-time details; permissive Joshua GBAFA demo sign-in; received/pending/failed payment states; downloadable acknowledgments and CSV; edit/pause/resume/cancel monthly plans; simulated installments and reminders; country totals separated by currency; message previews, replies and notification preferences; light, dark and extra-simple modes.
 
 Run locally: `python3 -m http.server 4173 --directory dist`. No build step. Sites identity is stored in .openai/hosting.json.
 

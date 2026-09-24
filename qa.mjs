@@ -6,14 +6,16 @@ await page.goto('http://localhost:4173');await page.evaluate(()=>localStorage.cl
 await page.screenshot({path:'/tmp/benmp-home.png',fullPage:true});
 await page.locator('[data-action="start"]').click();
 await page.locator('#country').waitFor();
-if(await page.locator('#country option').count()!==249)throw Error('Country list incomplete');
+if(await page.locator('#country option').count()!==243)throw Error('Country list incomplete or restricted entries visible');
+for(const code of ['CU','IR','KP','SY','RU','BY'])if(await page.locator(`#country option[value=\"${code}\"]`).count())throw Error(`Restricted country offered: ${code}`);
 await page.locator('#amount').fill('234.56');await page.locator('#country').selectOption('KE');
 await page.locator('#giving-form button[type="submit"]').click();
 await page.locator('#name').fill('Demo Partner');await page.locator('#email').fill('demo@example.com');await page.locator('#phone').fill('0700000000');await page.locator('#giving-form button[type="submit"]').click();
-if(!await page.getByText('M-PESA, Airtel Money',{exact:true}).isVisible())throw Error('Kenya routing missing');
+if(!await page.getByText('M-PESA',{exact:true}).isVisible()||!await page.getByText('Airtel Money',{exact:true}).isVisible())throw Error('Kenya routing missing');
 await page.screenshot({path:'/tmp/benmp-payment.png',fullPage:true});
 await page.locator('#giving-form button[type="submit"]').click();await page.waitForURL('**/#result');
 await page.getByText('Your generosity moves us.').waitFor();
+const receiptDownload=page.waitForEvent('download');await page.locator('[data-action="receipt"]').click();const receipt=await receiptDownload;if(!receipt.suggestedFilename().endsWith('.pdf'))throw Error('Receipt is not a PDF');await receipt.saveAs('/tmp/benmp-receipt.pdf');
 await page.locator('[data-action="dashboard"]').click();await page.waitForURL('**/#dashboard');
 await page.locator('#signin').click();await page.locator('#login-entry').fill('anything');await page.locator('#login-form button[type="submit"]').click();await page.locator('[data-action="finish-login"]').click();
 await page.getByRole('heading',{name:'Welcome, Joshua GBAFA'}).waitFor();
@@ -32,5 +34,5 @@ await page.setViewportSize({width:390,height:844});await page.goto('http://local
 if(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth))throw Error('Mobile overflow');
 await page.locator('#appearance').click();await page.locator('[data-action="simple"]').click();await page.locator('[data-action="start"]').click();await page.screenshot({path:'/tmp/benmp-simple.png',fullPage:true});
 if(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth))throw Error('Simple overflow');
-console.log(JSON.stringify({passed:['249 countries','custom amount','Kenya local methods','guest gift','permissive demo sign-in','organization monthly gift','pause/resume/edit/run monthly plan','message compose and reply','reload persistence','dark mode','mobile and simple layout'],errors}));
+console.log(JSON.stringify({passed:['243 available countries; restricted countries omitted','custom amount','Kenya local methods','guest gift','permissive demo sign-in','organization monthly gift','pause/resume/edit/run monthly plan','message compose and reply','reload persistence','dark mode','mobile and simple layout'],errors}));
 await browser.close();if(errors.length)process.exit(1);

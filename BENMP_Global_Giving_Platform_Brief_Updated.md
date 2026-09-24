@@ -1226,11 +1226,11 @@ The main navigation also provides **My giving** and **Messages**. Preserve light
 
 ## Countries, currencies and payment routing
 
-Include the full list of 249 ISO country/territory entries, with flags and alphabetical country names. Selection changes the proposed payment methods and selects a default currency. The donor can change currency and enter any positive amount; preset amounts are shortcuts, not limits. Countries without a configured local currency default to USD in this demo.
+Show an alphabetical country picker with flags and currency in each option (for example, United States — USD). Country selection sets currency automatically; there is no separate currency control in the donor flow. Donors can enter any positive amount; preset amounts are shortcuts, not limits. Countries without a configured local currency default to USD in this demo. The demo omits six restricted countries listed in section 36.
 
 Route Ghana to Mobile Money networks MTN MoMo, Telecel Cash and AT Money, plus card and transfer concepts. Nigeria includes bank transfer, supported wallet concepts, USSD and direct debit; Kenya includes M-PESA, Airtel Money and Pesalink; South Africa includes EFT, Capitec Pay and QR concepts; Côte d’Ivoire includes Wave, Orange Money and MTN MoMo. Global examples include card, bank debit, PayPal and selected country-specific methods such as Pix, PayNow, FPX, PromptPay, iDEAL, Bancontact and BLIK/Przelewy24. Wire and crypto can be explored as simulated alternatives.
 
-This full country picker is an exploration feature, not a claim that BENMP can accept real payments in every country. Live method availability must be filtered by merchant entity, country, currency, donation eligibility, provider account and restrictions. The demo labels the routes as illustrative and calls out selected restricted markets for dedicated review. Its restriction list is not a production compliance engine.
+The country picker is an exploration feature, not a claim that BENMP can accept real payments in every listed country. Live method availability must be filtered by merchant entity, country, currency, donation eligibility, provider account and restrictions. The prototype does not connect to payment APIs; live availability and compliance screening require production integrations and review.
 
 ## Permissive demo sign-in
 
@@ -1257,3 +1257,10 @@ The message inbox previews email, WhatsApp, SMS and in-app notifications, with r
 This is a hosted interactive prototype with browser-local persistence. Gifts, plans, profile details and messages stay in the current browser; they are not a shared server database and do not synchronize across devices. Reset demo clears this local data. Site hosting access and simulated BENMP sign-in are separate: permissive demo login does not bypass the host’s access controls.
 
 The current source is in `benmp-web-demo`. No live payment, email, SMS, WhatsApp or identity provider is connected. Real integrations, account verification, organization permissions, privacy/legal review, receiving entities and secure financial record reconciliation are separate production work.
+
+
+## 36. Restricted countries hidden from the giving flow
+
+Do not offer Cuba, Iran, North Korea, Syria, Russia or Belarus in the donor country selector. These entries are omitted entirely from the selectable list, rather than shown as unavailable. Apply the same restriction to interactive demo configuration inputs so a direct attempt to stage a gift with one of these country codes is rejected. This prototype filter is not a substitute for maintained sanctions screening, transaction monitoring or legal review in production.
+
+The country menu combines country and currency (for example, `United States — USD`); changing country sets currency automatically. Keep the $10 amount preset. For the selected country, show available donor-facing payment choices and their recognizable methods/networks, not payment processor brands. Processor routing remains internal. The prototype simulates checkout only and makes no real API calls.
