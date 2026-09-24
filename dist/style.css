@@ -1771,6 +1771,36 @@ footer button {
   color: rgba(255,255,255,.78);
   font-size: clamp(17px, 2vw, 20px);
 }
+.about-hero {
+  min-height: 520px;
+  isolation: isolate;
+}
+.about-hero::before {
+  content: "";
+  position: absolute;
+  z-index: -2;
+  inset: 0 0 0 40%;
+  background: url("assets/benmp-hero.webp") center 26% / cover no-repeat;
+  opacity: .94;
+}
+.about-hero::after {
+  z-index: -1;
+  inset: 0;
+  width: auto;
+  height: auto;
+  border: 0;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #0c1724 0%, #0c1724 33%, rgba(12,23,36,.93) 50%, rgba(12,23,36,.56) 72%, rgba(12,23,36,.38) 100%);
+  box-shadow: none;
+}
+.about-hero > p {
+  padding: 22px;
+  border: 1px solid rgba(255,255,255,.16);
+  border-radius: 16px;
+  background: rgba(7,15,24,.58);
+  backdrop-filter: blur(8px);
+  color: rgba(255,255,255,.92);
+}
 .about-grid {
   display: grid;
   grid-template-columns: minmax(0, 1.03fr) minmax(320px, .97fr);
@@ -1915,6 +1945,16 @@ footer button {
     border-radius: 22px;
   }
   .content-hero h1 { letter-spacing: -2.5px; }
+  .about-hero { min-height: 660px; }
+  .about-hero::before {
+    inset: 0;
+    background-position: 58% 28%;
+    opacity: .64;
+  }
+  .about-hero::after {
+    background: linear-gradient(180deg, rgba(12,23,36,.68) 0%, rgba(12,23,36,.72) 42%, rgba(12,23,36,.96) 82%, #0c1724 100%);
+  }
+  .about-hero > p { padding: 17px; }
   .about-grid, .contact-layout { grid-template-columns: 1fr; }
   .about-principles article { padding: 26px 22px; }
   .mission-band { align-items: flex-start; flex-direction: column; }

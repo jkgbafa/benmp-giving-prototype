@@ -1436,3 +1436,9 @@ The main About heading also ends with **Partner** so the definition is complete 
 Use the six official campaign photographs supplied on the BENMP website for the Odienné, Kankan, Lusaka, Kikwit, Accra and Port Louis campaign cards. Store the images with the prototype so the About page remains reliable and apply consistent image crops, rounded card edges and descriptive alternative text.
 
 In dark mode, Scripture cards should size themselves to their content. They must not stretch vertically into large empty blocks. Keep the three references compact and readable while preserving the two-column purpose section on larger screens and the single-column flow on mobile.
+
+# 46. Official BENMP Photography in the About Hero — 24 September 2026
+
+The first About section must use official BENMP campaign photography rather than a plain decorative gradient. Use the official image of Evangelist Dag Heward-Mills from the BENMP website as a full-bleed hero photograph. Apply a strong navy directional overlay behind the BENMP definition, then place the supporting description in a translucent dark panel over the quieter side of the image.
+
+Preserve the full **Beautiful, Exciting, Nice, Mood-Changing Partner** headline and keep **Mood-Changing** orange. On mobile, reposition the photograph so the subject remains visible, change the overlay to a vertical fade and place the description beneath the headline without obscuring the face.
