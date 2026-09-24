@@ -1345,3 +1345,17 @@ The About page explains the BENMP mission, the connection to the Healing Jesus C
 The Contact us page provides a responsive enquiry form for name, email, optional Phone / WhatsApp, topic and message. Topics include giving support, BENMP partnership, organization giving and BENMP ID support. Submitting valid details shows a clear received confirmation and allows the visitor to start another enquiry.
 
 In bank-transfer instructions, each receiving detail retains its individual copy action. Present that action as the familiar overlapping-rectangles copy icon instead of the word **Copy**. Every icon button must have an accessible label naming the field it copies, and selecting it must still copy the exact value and show confirmation.
+
+# 40. Simpler Returning-Donor Concepts and Transfer Reference — 24 September 2026
+
+In the donation summary, place **Use your email or BENMP ID as the payment reference.** directly below the local bank-transfer description. Keep the same guidance inside expanded transfer instructions so it remains visible when the donor copies bank details.
+
+Two simplified details-screen directions were prepared for review. The first presents two large paths: **I’ve given before** with one email/BENMP ID field, and **I’m giving for the first time** with a single action to reveal details. The second prioritizes one email/BENMP ID field for returning donors, followed by a visually secondary first-time form. Both remove the three stacked accordions and retain the compact donation summary.
+
+## Prominent Give navigation and campaign website
+
+Treat **Give** as the primary public navigation action by placing it on a solid orange background while Home, About and Contact us remain text links. On the About page, include a **Find out more about us** action that opens the official [Healing Jesus Campaign website](https://daghewardmills.org/healingjesuscampaign/) in a new tab.
+
+## Header-to-hero transition
+
+On the homepage, allow the moving hero to extend behind the BENMP / Healing Jesus Campaign header. The header background begins opaque at the top and becomes progressively transparent toward the bottom so it blends into the video without a hard line. Preserve the hero’s long black fade at the bottom.

@@ -1817,3 +1817,78 @@ footer button {
   .mission-band { align-items: flex-start; flex-direction: column; }
   .contact-form .grid2 { grid-template-columns: 1fr; }
 }
+.method-line .reference-note {
+  margin-top: 5px;
+  color: var(--ink);
+  font-weight: 550;
+}
+
+/* Make giving the clear primary action in the public navigation. */
+nav a.nav-give {
+  padding: 11px 18px;
+  border-radius: 10px;
+  background: var(--blue);
+  color: #fff;
+  font-weight: 700;
+}
+nav a.nav-give:hover { background: #d96608; }
+nav a.nav-give.active { color: #fff; }
+nav a.nav-give.active::after { display: none; }
+.campaign-link {
+  margin: 28px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 42px;
+  padding: clamp(30px, 4vw, 48px);
+}
+.campaign-link .eyebrow { margin-bottom: 13px; }
+.campaign-link h2 { margin-bottom: 10px; }
+.campaign-link p:not(.eyebrow) { color: var(--muted); max-width: 650px; }
+.campaign-link > a { flex: none; display: inline-flex; align-items: center; gap: 9px; }
+@media (max-width: 780px) {
+  nav a.nav-give { padding: 9px 16px; }
+  .campaign-link { align-items: flex-start; flex-direction: column; gap: 25px; }
+  .campaign-link > a { width: 100%; justify-content: center; }
+}
+
+/* On Home, the header dissolves into the moving hero instead of ending at a hard edge. */
+body[data-view="home"] header {
+  position: absolute;
+  z-index: 20;
+  top: 34px;
+  left: 50%;
+  width: min(100%, 1240px);
+  transform: translateX(-50%);
+}
+body[data-view="home"] header::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: -110px;
+  left: 50%;
+  width: 100vw;
+  transform: translateX(-50%);
+  background: linear-gradient(
+    to bottom,
+    rgba(var(--fade-rgb), .99) 0%,
+    rgba(var(--fade-rgb), .94) 42%,
+    rgba(var(--fade-rgb), .62) 67%,
+    rgba(var(--fade-rgb), .18) 86%,
+    rgba(var(--fade-rgb), 0) 100%
+  );
+  pointer-events: none;
+}
+body[data-view="home"] .hero.hero-cinematic {
+  min-height: calc(100svh - 34px);
+  padding-top: calc(clamp(64px, 8vh, 104px) + 112px);
+}
+@media (max-width: 780px) {
+  body[data-view="home"] header { top: 34px; }
+  body[data-view="home"] header::before { bottom: -82px; }
+  body[data-view="home"] .hero.hero-cinematic {
+    min-height: calc(100svh - 34px);
+    padding-top: 218px;
+  }
+}
