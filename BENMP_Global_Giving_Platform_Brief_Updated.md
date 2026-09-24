@@ -1370,3 +1370,7 @@ For a signed-out donor, the step after choosing an amount begins with one field:
 - If the donor is already signed in, skip the details step entirely. The journey becomes Donation followed directly by Payment, and the progress indicator should show those two steps only.
 
 Keep the homepage header at its original height. Its background gradient must remain within that height and use a smooth, subtle opacity transition into the hero video rather than an extended pale band.
+
+## Donate action label
+
+Use **Donate** for the prominent orange action in both the public header and the homepage hero. Both actions open the existing donation flow.
