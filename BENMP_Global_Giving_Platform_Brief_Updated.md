@@ -1396,3 +1396,7 @@ The Church list begins in this exact order:
 5. All supplied UD denomination names
 
 Selecting **Other** immediately reveals a required **Church name** field. Selecting **None** is a valid response. Require new donors to choose one listed value before continuing to Payment.
+
+## Hero Donate-button contrast
+
+Use white text on the homepage hero’s orange **Donate** button.
