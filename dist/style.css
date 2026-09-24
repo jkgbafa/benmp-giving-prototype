@@ -618,17 +618,22 @@ footer button {
   font-weight: 400;
 }
 .summary .sum-amount {
-  font-size: 42px;
-  letter-spacing: -1.7px;
+  font-family: inherit;
+  font-size: 49px;
+  letter-spacing: -2px;
   margin: 28px 0 8px;
-  font-weight: 450;
+  font-weight: 400;
   overflow-wrap: anywhere;
 }
+.summary .sum-amount b {
+  font: inherit;
+}
 .summary .sum-amount span {
-  font-size: 16px;
+  font-family: inherit;
+  font-size: 17px;
   letter-spacing: 0;
   color: var(--muted);
-  font-weight: 450;
+  font-weight: 400;
 }
 .divider {
   border: 0;
@@ -1491,7 +1496,7 @@ footer button {
     overflow-wrap: anywhere;
   }
   .summary .sum-amount {
-    font-size: 35px;
+    font-size: 44px;
   }
 }
 @media (max-width: 380px) {
@@ -1536,6 +1541,9 @@ footer button {
 }
 .hero.hero-cinematic h1 span {
   color: #f28c28;
+}
+.hero.hero-cinematic h1 {
+  text-shadow: 0 5px 18px rgba(0, 0, 0, 0.58);
 }
 .hero.hero-cinematic .primary {
   background: #f28c28;
