@@ -1406,3 +1406,17 @@ Use white text on the homepage hero’s orange **Donate** button.
 The Church field for new donors is a complete dropdown labeled **Church / denomination**. Opening it reveals every available denomination in one scrollable menu, beginning with **Other**, **None**, **First Love Church**, and **Love First**. A search field inside the open menu filters the complete list without auto-selecting an unintended church. The selected denomination is clearly marked, and choosing **Other** reveals the required free-text church-name field.
 
 The homepage hero headline reads **You Can Help Bring Salvation To The Multitudes**, with **Salvation** retained as the orange emphasis. The hero Donate button uses white text.
+
+# 44. Full BENMP Story, Hero About Action and Donation Limit — 24 September 2026
+
+The homepage hero contains three actions:
+
+1. **Donate** — orange with white text
+2. **Become a BENMP partner** — white
+3. **What is BENMP?** — white and linked directly to the About page
+
+The About page now presents the complete BENMP story in the established BENMP orange, white and navy style. It explains that BENMP means **Beautiful, Exciting, Nice, Mood-Changing Partner**, describes the soul-winning purpose of regular partnership, includes the Luke 15:24, Proverbs 11:30 and Daniel 12:3 context, and explains how a partner helps send Evangelist Dag Heward-Mills and the Healing Jesus Campaign team to towns, cities and nations.
+
+The page includes the official campaign totals currently presented by BENMP: **25.4M+ souls won, 277 cities visited, 41 nations reached and 819+ crusade nights**. It also presents the 2026 campaign highlights for Odienné, Kankan, Lusaka, Kikwit, Accra and Port Louis, with their documented salvation or attendance figures. Monthly partnership and one-time donation are displayed as clear, separate participation paths, followed by links to the Healing Jesus Campaign gallery and official BENMP website.
+
+The donation amount field enforces a maximum of **999,999** in the selected currency and explains the limit beneath the quick-amount choices. Values above the limit remain on the amount screen and show a direct validation message.

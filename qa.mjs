@@ -6,14 +6,16 @@ await page.addInitScript(()=>Object.defineProperty(navigator,'clipboard',{value:
 await page.goto('http://localhost:4173');await page.evaluate(()=>localStorage.clear());await page.reload();
 if(JSON.stringify(await page.locator('nav a:not([hidden])').allTextContents())!==JSON.stringify(['Home','About','Contact us','Donate']))throw Error('Public navigation is incomplete');
 if(!await page.locator('nav a[href="#home"]').evaluate(el=>el.classList.contains('active')))throw Error('Home navigation is not active');
-await page.locator('nav a[href="#about"]').click();await page.getByRole('heading',{name:'Partners in the Great Commission.'}).waitFor();
+await page.locator('nav a[href="#about"]').click();await page.getByRole('heading',{name:'Beautiful. Exciting. Nice. Mood-Changing.'}).waitFor();
 if(!await page.locator('nav a[href="#about"]').evaluate(el=>el.classList.contains('active')))throw Error('About navigation is not active');
-const campaignLink=page.getByRole('link',{name:/Find out more about us/});if(await campaignLink.getAttribute('href')!=='https://daghewardmills.org/healingjesuscampaign/'||await campaignLink.getAttribute('target')!=='_blank')throw Error('Healing Jesus Campaign link is missing or incorrect');
+if(await page.locator('.benmp-letters article').count()!==4||await page.locator('.impact-stats article').count()!==4||await page.locator('.campaign-results-grid article').count()!==6||await page.locator('.giving-path').count()!==2)throw Error('Expanded BENMP About content is incomplete');
+const campaignLink=page.getByRole('link',{name:/View campaign gallery/});if(await campaignLink.getAttribute('href')!=='https://daghewardmills.org/healingjesuscampaign/'||await campaignLink.getAttribute('target')!=='_blank')throw Error('Healing Jesus Campaign link is missing or incorrect');
 if((await page.locator('nav a.nav-give').evaluate(el=>getComputedStyle(el).backgroundColor))==='rgba(0, 0, 0, 0)')throw Error('Give navigation action has no background');
 await page.locator('nav a[href="#contact"]').click();await page.getByRole('heading',{name:'We are here to help.'}).waitFor();
 await page.locator('#contact-name').fill('Joshua GBAFA');await page.locator('#contact-email').fill('joshua@example.com');await page.locator('#contact-message').fill('Please help me with my partnership.');await page.locator('#contact-form button[type="submit"]').click();await page.getByRole('heading',{name:'Thank you, Joshua GBAFA.'}).waitFor();
 await page.locator('[data-action="contact-reset"]').click();if(!await page.locator('#contact-form').count())throw Error('Contact form did not reset');
 await page.locator('nav a[href="#home"]').click();
+if(await page.locator('.hero-actions a[href="#about"]').innerText()!=='What is BENMP?')throw Error('Hero BENMP About button is missing');
 if((await page.locator('.hero h1').innerText()).replace(/\n+/g,' ').trim()!=='You Can Help Bring Salvation To The Multitudes')throw Error('Hero message is incorrect');
 if(await page.locator('.hero h1 span').innerText()!=='Salvation')throw Error('Hero emphasis is incorrect');
 if(await page.locator('.hero .eyebrow').innerText()!=='HOW CAN THEY HEAR WITHOUT A PREACHER?')throw Error('Hero supporting line is incorrect');
@@ -30,6 +32,7 @@ await page.goto('http://localhost:4173/#home');await page.locator('[data-action=
 await page.locator('#country-search').waitFor();
 if(!await page.getByRole('heading',{name:'Give your donation',exact:true}).count()||await page.locator('.giving-layout > .panel > .section-title').count()||await page.getByText(/01 \/ 03|02 \/ 03|03 \/ 03/).count())throw Error('Donation heading or removed step counter is incorrect');
 if(await page.locator('#amount').inputValue()!==''||await page.locator('#summary-amount').innerText()!=='—')throw Error('Amount should start empty');
+await page.locator('#amount').fill('1000000');await page.locator('#giving-form button[type="submit"]').click();if(!await page.getByText('Enter an amount of 999,999 GHS or less.').isVisible())throw Error('Donation maximum is not enforced');await page.locator('#amount').fill('');
 if(JSON.stringify(await page.locator('[data-amount]').allTextContents())!==JSON.stringify(['10','25','50','100','200']))throw Error('Ghana quick amounts are incorrect');
 const amountType=await page.evaluate(()=>{const input=getComputedStyle(document.querySelector('#amount')),preview=getComputedStyle(document.querySelector('#summary-amount'));return [input.fontFamily,input.fontSize,input.fontWeight,input.letterSpacing,preview.fontFamily,preview.fontSize,preview.fontWeight,preview.letterSpacing]});if(amountType.slice(0,4).join('|')!==amountType.slice(4).join('|'))throw Error('Preview amount typography does not match the amount field');
 if(await page.locator('#country option').count()!==243)throw Error('Country list incomplete or restricted entries visible');
