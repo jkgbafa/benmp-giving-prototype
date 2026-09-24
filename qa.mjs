@@ -6,9 +6,9 @@ await page.addInitScript(()=>Object.defineProperty(navigator,'clipboard',{value:
 await page.goto('http://localhost:4173');await page.evaluate(()=>localStorage.clear());await page.reload();
 if(JSON.stringify(await page.locator('nav a:not([hidden])').allTextContents())!==JSON.stringify(['Home','About','Contact us','Donate']))throw Error('Public navigation is incomplete');
 if(!await page.locator('nav a[href="#home"]').evaluate(el=>el.classList.contains('active')))throw Error('Home navigation is not active');
-await page.locator('nav a[href="#about"]').click();await page.getByRole('heading',{name:'Beautiful. Exciting. Nice. Mood-Changing.'}).waitFor();
+await page.locator('nav a[href="#about"]').click();await page.getByRole('heading',{name:'Beautiful. Exciting. Nice. Mood-Changing. Partner.'}).waitFor();
 if(!await page.locator('nav a[href="#about"]').evaluate(el=>el.classList.contains('active')))throw Error('About navigation is not active');
-if(await page.locator('.benmp-letters article').count()!==4||await page.locator('.impact-stats article').count()!==4||await page.locator('.campaign-results-grid article').count()!==6||await page.locator('.giving-path').count()!==2)throw Error('Expanded BENMP About content is incomplete');
+if(await page.locator('.benmp-letters article').count()!==5||await page.locator('.benmp-letters article:last-child').innerText()!=='P\nPartner'||await page.locator('.impact-stats article').count()!==4||await page.locator('.campaign-results-grid article').count()!==6||await page.locator('.campaign-results-grid img').count()!==6||await page.locator('.giving-path').count()!==2)throw Error('Expanded BENMP About content is incomplete');
 const campaignLink=page.getByRole('link',{name:/View campaign gallery/});if(await campaignLink.getAttribute('href')!=='https://daghewardmills.org/healingjesuscampaign/'||await campaignLink.getAttribute('target')!=='_blank')throw Error('Healing Jesus Campaign link is missing or incorrect');
 if((await page.locator('nav a.nav-give').evaluate(el=>getComputedStyle(el).backgroundColor))==='rgba(0, 0, 0, 0)')throw Error('Give navigation action has no background');
 await page.locator('nav a[href="#contact"]').click();await page.getByRole('heading',{name:'We are here to help.'}).waitFor();

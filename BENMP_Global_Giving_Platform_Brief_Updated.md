@@ -1420,3 +1420,19 @@ The About page now presents the complete BENMP story in the established BENMP or
 The page includes the official campaign totals currently presented by BENMP: **25.4M+ souls won, 277 cities visited, 41 nations reached and 819+ crusade nights**. It also presents the 2026 campaign highlights for Odienné, Kankan, Lusaka, Kikwit, Accra and Port Louis, with their documented salvation or attendance figures. Monthly partnership and one-time donation are displayed as clear, separate participation paths, followed by links to the Healing Jesus Campaign gallery and official BENMP website.
 
 The donation amount field enforces a maximum of **999,999** in the selected currency and explains the limit beneath the quick-amount choices. Values above the limit remain on the amount screen and show a direct validation message.
+
+# 45. Complete BENMP Name, Campaign Photography and Dark-Mode Balance — 24 September 2026
+
+The About page must always spell out all five BENMP letters:
+
+- **B — Beautiful**
+- **E — Exciting**
+- **N — Nice**
+- **M — Mood-Changing**
+- **P — Partner**
+
+The main About heading also ends with **Partner** so the definition is complete in both the headline and the letter cards.
+
+Use the six official campaign photographs supplied on the BENMP website for the Odienné, Kankan, Lusaka, Kikwit, Accra and Port Louis campaign cards. Store the images with the prototype so the About page remains reliable and apply consistent image crops, rounded card edges and descriptive alternative text.
+
+In dark mode, Scripture cards should size themselves to their content. They must not stretch vertically into large empty blocks. Keep the three references compact and readable while preserving the two-column purpose section on larger screens and the single-column flow on mobile.
