@@ -1264,3 +1264,50 @@ The current source is in `benmp-web-demo`. No live payment, email, SMS, WhatsApp
 Do not offer Cuba, Iran, North Korea, Syria, Russia or Belarus in the donor country selector. These entries are omitted entirely from the selectable list, rather than shown as unavailable. Apply the same restriction to interactive demo configuration inputs so a direct attempt to stage a gift with one of these country codes is rejected. This prototype filter is not a substitute for maintained sanctions screening, transaction monitoring or legal review in production.
 
 The country menu combines country and currency (for example, `United States — USD`); changing country sets currency automatically. Keep the $10 amount preset. For the selected country, show available donor-facing payment choices and their recognizable methods/networks, not payment processor brands. Processor routing remains internal. The prototype simulates checkout only and makes no real API calls.
+
+# 37. Finalized Interactive Flow and Statement Tools — 24 September 2026
+
+This section supersedes conflicting prototype copy and step order in sections 34–36.
+
+## Homepage and navigation
+
+The cinematic homepage uses the three-line title **Bring / Salvation / To The Multitudes**. Each word uses initial capitalization, **Salvation** is orange, and the supporting line reads **How Can They Hear Without A Preacher?** The video area and its fade remain black in light and dark mode. The Give and Become a BENMP partner actions remain directly available.
+
+My Giving and Messages are shown only after the sample account is signed in. The theme control switches directly between light and dark mode.
+
+## Country, phone and amount selection
+
+The searchable country field keeps country names as the primary choice while allowing country codes and currencies to find matching options. Typing a partial or ambiguous value such as `So` must not select Somalia before the donor can finish typing South Africa. A country is committed only after an exact country name or displayed suggestion is chosen.
+
+Country and currency remain one full-width field. Available quick amounts are **10, 25, 50, 100 and 200**, while donors may still enter any positive amount. Phone and Mobile Money fields display the selected country’s international dialing prefix as a fixed prefix, such as `+233` for Ghana, and the donor enters the remaining digits.
+
+## One-time donation and returning donor details
+
+The one-time donation journey remains amount, details and payment. A signed-in returning donor’s stored identity is applied automatically on the details step. Do not show Edit saved details or an additional saved-details selector inside that flow. Guests may sign in, identify the donation with an email BENMP ID, or provide first-time name, email and phone details.
+
+## BENMP partner registration
+
+Become a BENMP partner opens a distinct three-step journey:
+
+1. **Your details:** register individual or organization details, choose country, and collect name, email/BENMP ID and phone. A signed-in donor’s verified sample identity is applied automatically.
+2. **Monthly pledge:** choose the monthly amount and monthly date, then explicitly confirm, “Yes, I want to give this amount every month.”
+3. **Payment:** choose the eligible method, enter its details, make the first donation and establish the simulated monthly schedule or reminder.
+
+Organization registration continues to collect organization name/type, finance email, billing address, optional reference, representative role and authority confirmation.
+
+## Payment entry and bank instructions
+
+Payment accordions must behave like practical entry screens. Debit/credit card expands to editable card number, name on card, expiration date, security code and billing postal code fields. The prototype accepts sample input without connecting to a processor.
+
+For countries with bank transfer, keep transfer as the final payment option. For Ghana and Kenya, the visible order is local mobile payment, debit/credit card, then bank transfer. Expanded bank transfer instructions show account name, bank name, account number, branch, branch or routing code, SWIFT/BIC and currency. Every value has its own Copy button. The prototype top banner and final payment note identify the experience as simulated, so the transfer panel should use practical labels rather than placeholder phrases such as “Demo transfer instructions.” Production must replace sample receiving details with verified BENMP accounts before accepting funds.
+
+## Giving statements
+
+My Giving includes a Giving statement generator above Giving history. The donor can choose This year, Last 30 days, Last 90 days, Previous year or All time, then:
+
+- download a branded A4 PDF immediately; or
+- enter an email address and preview an emailed PDF attachment in Messages.
+
+The PDF includes the BENMP logo, partner name and BENMP ID, statement period, confirmed-donation count, totals separated by currency, and the matching donation history with date, reference, country, payment method, status and amount. Long histories continue across multiple numbered pages. Only confirmed donations contribute to totals, while the history can show other statuses for completeness.
+
+Email delivery remains simulated in the browser. The Messages preview shows the generated statement as a downloadable attachment. A production release requires a server-side PDF store or regeneration endpoint, authenticated authorization checks, an email provider, delivery tracking and retention rules.
