@@ -1400,3 +1400,9 @@ Selecting **Other** immediately reveals a required **Church name** field. Select
 ## Hero Donate-button contrast
 
 Use white text on the homepage hero’s orange **Donate** button.
+
+# 43. Full Denomination Dropdown and Hero Message — 24 September 2026
+
+The Church field for new donors is a complete dropdown labeled **Church / denomination**. Opening it reveals every available denomination in one scrollable menu, beginning with **Other**, **None**, **First Love Church**, and **Love First**. A search field inside the open menu filters the complete list without auto-selecting an unintended church. The selected denomination is clearly marked, and choosing **Other** reveals the required free-text church-name field.
+
+The homepage hero headline reads **You Can Help Bring Salvation To The Multitudes**, with **Salvation** retained as the orange emphasis. The hero Donate button uses white text.
