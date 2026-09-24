@@ -4,6 +4,7 @@
   background: #fff;
   font-synthesis: none;
   --bg: #fff;
+  --fade-rgb: 255, 255, 255;
   --surface: #fff;
   --soft: #f0f3f7;
   --ink: #172436;
@@ -856,6 +857,7 @@ footer button {
 }
 .dark {
   --bg: #060608;
+  --fade-rgb: 6, 6, 8;
   --surface: #18222e;
   --soft: #22303f;
   --ink: #eef4fa;
@@ -1259,17 +1261,31 @@ footer button {
   background: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 0.6) 0%,
-    rgba(0, 0, 0, 0.2) 58%,
-    rgba(0, 0, 0, 0.08) 70%,
+    rgba(0, 0, 0, 0.28) 34%,
+    rgba(var(--fade-rgb), 0.12) 48%,
+    rgba(var(--fade-rgb), 0.42) 64%,
+    rgba(var(--fade-rgb), 0.76) 82%,
     var(--bg) 100%
   );
 }
 .hero.hero-cinematic h1 span {
-  color: #88c7ff;
+  color: #f28c28;
+}
+.hero.hero-cinematic .eyebrow {
+  color: #fff;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.68);
+}
+.hero.hero-cinematic .hint,
+.hero.hero-cinematic .text-link {
+  color: var(--ink);
+  text-shadow: none;
 }
 .hero.hero-cinematic .hero-foot {
   color: var(--ink);
   margin-top: clamp(58px, 9vh, 110px);
+  font-weight: 650;
 }
 .hero.hero-cinematic .hero-foot img {
   width: 44px;
@@ -1294,8 +1310,10 @@ footer button {
     background: linear-gradient(
       to bottom,
       rgba(0, 0, 0, 0.6) 0%,
-      rgba(0, 0, 0, 0.2) 60%,
-      rgba(0, 0, 0, 0.08) 72%,
+      rgba(0, 0, 0, 0.28) 34%,
+      rgba(var(--fade-rgb), 0.12) 48%,
+      rgba(var(--fade-rgb), 0.42) 64%,
+      rgba(var(--fade-rgb), 0.76) 82%,
       var(--bg) 100%
     );
   }
