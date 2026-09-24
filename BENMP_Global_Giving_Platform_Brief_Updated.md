@@ -1374,3 +1374,7 @@ Keep the homepage header at its original height. Its background gradient must re
 ## Donate action label
 
 Use **Donate** for the prominent orange action in both the public header and the homepage hero. Both actions open the existing donation flow.
+
+## Header fade range
+
+Keep the homepage header’s layout height unchanged. Extend only its visual background overlay across the top of the hero. Hold the header background nearly solid from 0–30%, then fade its opacity smoothly from 30–100% without a blur filter or a visible horizontal boundary.
