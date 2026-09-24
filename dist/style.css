@@ -376,6 +376,27 @@ footer button {
   border: 0;
   border-radius: 0;
 }
+.phone-code-picker {
+  position: relative;
+  width: min(230px, 46%);
+  flex: none;
+  display: flex;
+  align-items: center;
+  border-right: 1px solid var(--line);
+  background: var(--soft);
+}
+.phone-code-picker .field {
+  width: 100%;
+  padding-right: 32px;
+  background: transparent;
+  font-weight: 600;
+}
+.phone-code-picker > span {
+  position: absolute;
+  right: 12px;
+  color: var(--muted);
+  pointer-events: none;
+}
 .transfer-card {
   margin-top: 18px;
   border: 1px solid var(--line);

@@ -1281,7 +1281,9 @@ My Giving and Messages are shown only after the sample account is signed in. The
 
 The searchable country field keeps country names as the primary choice while allowing country codes and currencies to find matching options. Typing a partial or ambiguous value such as `So` must not select Somalia before the donor can finish typing South Africa. A country is committed only after an exact country name or displayed suggestion is chosen.
 
-Country and currency remain one full-width field. Search indexes the country name, country code, currency code, full currency name and supported common spellings. For example, **Cedi**, **Cedis**, **Ghanaian Cedi** and **GHS** surface Ghana, while incomplete text such as **CD** remains unselected. The amount field starts empty and the preview shows a dash until the donor types an amount or chooses a shortcut. Quick amounts scale to the selected currency so every suggestion remains meaningful: Ghana uses **10, 25, 50, 100 and 200 GHS**, Nigeria uses **1,000, 2,500, 5,000, 10,000 and 25,000 NGN**, and high-denomination currencies use proportionate bands. Donors may still enter any positive amount. Phone and Mobile Money fields display the selected country’s international dialing prefix as a fixed prefix, such as `+233` for Ghana, and the donor enters the remaining digits.
+Country and currency remain one full-width field. Search indexes the country name, country code, currency code, full currency name and supported common spellings. For example, **Cedi**, **Cedis**, **Ghanaian Cedi** and **GHS** surface Ghana, while incomplete text such as **CD** remains unselected. The amount field starts empty and the preview shows a dash until the donor types an amount or chooses a shortcut. Quick amounts scale to the selected currency so every suggestion remains meaningful: Ghana uses **10, 25, 50, 100 and 200 GHS**, Nigeria uses **1,000, 2,500, 5,000, 10,000 and 25,000 NGN**, and high-denomination currencies use proportionate bands. Donors may still enter any positive amount.
+
+On the details page, Phone / WhatsApp defaults to the international dialing code for the selected giving country. The donor may change this independently through a searchable dropdown accepting a country name, ISO country code or calling code. Mobile Money remains locked to the original giving country and displays that country’s fixed calling prefix.
 
 ## One-time donation and returning donor details
 
@@ -1297,7 +1299,7 @@ Become a BENMP partner opens a distinct three-step journey:
 2. **Monthly pledge:** choose the monthly amount and monthly date, then explicitly confirm, “Yes, I want to give this amount every month.”
 3. **Payment:** choose the eligible method, enter its details, make the first donation and establish the simulated monthly schedule or reminder.
 
-Organization registration continues to collect organization name/type, finance email, billing address, optional reference, representative role and authority confirmation.
+Organization registration collects organization name, organization type and representative role. Do not request a separate finance email, billing address, department/reference or authorization checkbox in this flow; use the donor’s BENMP email as the organization donation contact.
 
 ## Payment entry and bank instructions
 
