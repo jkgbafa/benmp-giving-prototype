@@ -1335,3 +1335,13 @@ The donation receipt is a clean branded PDF with the BENMP logo, confirmed statu
 ## Implementation boundary
 
 The hosted presentation stores state in the browser and uses permissive local interactions so reviewers can complete every flow. A production launch still requires live payment, identity, email, SMS and WhatsApp integrations; verified BENMP receiving accounts; secure server-side records; compliance screening; and approved legal and privacy documentation. These requirements belong in implementation documentation and must not interrupt the donor-facing journey with prototype copy.
+
+# 39. Public Website Pages and Bank Copy Controls — 24 September 2026
+
+The public website has four primary navigation destinations: **Home**, **About**, **Contact us** and **Give**. Replace the former Partner navigation label with Home. Home remains the cinematic campaign landing page, while Give opens the donation journey. Signed-in account links for My giving and Messages remain conditional and appear only after authentication.
+
+The About page explains the BENMP mission, the connection to the Healing Jesus Campaign, the worldwide partnership, familiar local ways to give and the ongoing relationship supported by the BENMP ID. It provides direct actions to give or become a monthly partner.
+
+The Contact us page provides a responsive enquiry form for name, email, optional Phone / WhatsApp, topic and message. Topics include giving support, BENMP partnership, organization giving and BENMP ID support. Submitting valid details shows a clear received confirmation and allows the visitor to start another enquiry.
+
+In bank-transfer instructions, each receiving detail retains its individual copy action. Present that action as the familiar overlapping-rectangles copy icon instead of the word **Copy**. Every icon button must have an accessible label naming the field it copies, and selecting it must still copy the exact value and show confirmation.
