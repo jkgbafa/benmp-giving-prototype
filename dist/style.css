@@ -1270,9 +1270,9 @@ footer button {
   }
 }
 
-/* Full-bleed cinematic hero with a theme-aware handoff into the page. */
+/* The cinematic hero always fades into black, in either page theme. */
 .hero.hero-cinematic {
-  background: var(--bg);
+  background: #000;
   width: 100vw;
   max-width: none;
   min-height: calc(100svh - 146px);
@@ -1309,7 +1309,7 @@ footer button {
 }
 .hero.hero-cinematic .hint,
 .hero.hero-cinematic .text-link {
-  color: var(--ink);
+  color: #fff;
   text-shadow: none;
 }
 .hero.hero-cinematic .hero-foot {
