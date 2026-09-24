@@ -1556,10 +1556,12 @@ footer button {
 }
 .hero.hero-cinematic .eyebrow {
   color: #fff;
+  font-size: clamp(10px, 1.1vw, 13px);
   font-weight: 800;
   letter-spacing: 1.8px;
   text-transform: none;
   text-shadow: 0 2px 20px rgba(0, 0, 0, 0.68);
+  white-space: nowrap;
 }
 .hero.hero-cinematic .hint,
 .hero.hero-cinematic .text-link {
@@ -1592,6 +1594,9 @@ footer button {
   }
   .hero.hero-cinematic .hero-content {
     width: 100%;
+  }
+  .hero.hero-cinematic .eyebrow {
+    letter-spacing: 0.8px;
   }
   .hero.hero-cinematic h1 {
     font-size: clamp(40px, 10vw, 70px);

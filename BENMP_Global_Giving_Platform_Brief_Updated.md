@@ -1271,7 +1271,7 @@ This section supersedes conflicting prototype copy and step order in sections 34
 
 ## Homepage and navigation
 
-The cinematic homepage uses the three-line title **Bring / Salvation / To The Multitudes**. Each word uses initial capitalization, **Salvation** is orange, and the supporting line reads **How can they hear without a preacher?** Apply a restrained dark drop shadow to the full headline so it remains crisp over moving footage. The video area and its fade remain black in light and dark mode. The Give and Become a BENMP partner actions remain directly available.
+The cinematic homepage uses the three-line title **Bring / Salvation / To The Multitudes**. Each word uses initial capitalization, **Salvation** is orange, and the single-line supporting text reads **How Can They Hear Without A Preacher?**, with every word capitalized. Apply a restrained dark drop shadow to the full headline so it remains crisp over moving footage. The video area and its fade remain black in light and dark mode. The Give and Become a BENMP partner actions remain directly available.
 
 The amount shown in the **Your partnership** preview uses the same slim numeral family, weight, tracking and responsive scale as the editable **Choose any amount** field. The favicon uses a square transparent canvas with the Healing Jesus artwork preserved as a proportional circle.
 
