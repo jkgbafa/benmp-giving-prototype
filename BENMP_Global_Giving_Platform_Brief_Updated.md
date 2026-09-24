@@ -1281,7 +1281,7 @@ My Giving and Messages are shown only after the sample account is signed in. The
 
 The searchable country field keeps country names as the primary choice while allowing country codes and currencies to find matching options. Typing a partial or ambiguous value such as `So` must not select Somalia before the donor can finish typing South Africa. A country is committed only after an exact country name or displayed suggestion is chosen.
 
-Country and currency remain one full-width field. Available quick amounts are **10, 25, 50, 100 and 200**, while donors may still enter any positive amount. Phone and Mobile Money fields display the selected country’s international dialing prefix as a fixed prefix, such as `+233` for Ghana, and the donor enters the remaining digits.
+Country and currency remain one full-width field. The amount field starts empty and the preview shows a dash until the donor types an amount or chooses a shortcut. Quick amounts scale to the selected currency so every suggestion remains meaningful: Ghana uses **10, 25, 50, 100 and 200 GHS**, Nigeria uses **1,000, 2,500, 5,000, 10,000 and 25,000 NGN**, and high-denomination currencies use proportionate bands. Donors may still enter any positive amount. Phone and Mobile Money fields display the selected country’s international dialing prefix as a fixed prefix, such as `+233` for Ghana, and the donor enters the remaining digits.
 
 ## One-time donation and returning donor details
 
