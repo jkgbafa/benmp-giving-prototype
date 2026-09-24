@@ -1271,7 +1271,7 @@ This section supersedes conflicting prototype copy and step order in sections 34
 
 ## Homepage and navigation
 
-The cinematic homepage uses the three-line title **Bring / Salvation / To The Multitudes**. Each word uses initial capitalization, **Salvation** is orange, and the single-line supporting text reads **How Can They Hear Without A Preacher?**, with every word capitalized. Apply a restrained dark drop shadow to the full headline so it remains crisp over moving footage. The video area and its fade remain black in light and dark mode. The Give and Become a BENMP partner actions remain directly available.
+The cinematic homepage uses the three-line title **Bring / Salvation / To The Multitudes**. Each word uses initial capitalization, **Salvation** is orange, and the single-line supporting text reads **HOW CAN THEY HEAR WITHOUT A PREACHER?** in full uppercase. Apply a restrained dark drop shadow to the full headline so it remains crisp over moving footage. The video area and its fade remain black in light and dark mode. The Give and Become a BENMP partner actions remain directly available.
 
 The amount shown in the **Your partnership** preview uses the same slim numeral family, weight, tracking and responsive scale as the editable **Choose any amount** field. The favicon uses a square transparent canvas with the Healing Jesus artwork preserved as a proportional circle.
 
@@ -1281,11 +1281,13 @@ My Giving and Messages are shown only after the sample account is signed in. The
 
 The searchable country field keeps country names as the primary choice while allowing country codes and currencies to find matching options. Typing a partial or ambiguous value such as `So` must not select Somalia before the donor can finish typing South Africa. A country is committed only after an exact country name or displayed suggestion is chosen.
 
-Country and currency remain one full-width field. The amount field starts empty and the preview shows a dash until the donor types an amount or chooses a shortcut. Quick amounts scale to the selected currency so every suggestion remains meaningful: Ghana uses **10, 25, 50, 100 and 200 GHS**, Nigeria uses **1,000, 2,500, 5,000, 10,000 and 25,000 NGN**, and high-denomination currencies use proportionate bands. Donors may still enter any positive amount. Phone and Mobile Money fields display the selected country’s international dialing prefix as a fixed prefix, such as `+233` for Ghana, and the donor enters the remaining digits.
+Country and currency remain one full-width field. Search indexes the country name, country code, currency code, full currency name and supported common spellings. For example, **Cedi**, **Cedis**, **Ghanaian Cedi** and **GHS** surface Ghana, while incomplete text such as **CD** remains unselected. The amount field starts empty and the preview shows a dash until the donor types an amount or chooses a shortcut. Quick amounts scale to the selected currency so every suggestion remains meaningful: Ghana uses **10, 25, 50, 100 and 200 GHS**, Nigeria uses **1,000, 2,500, 5,000, 10,000 and 25,000 NGN**, and high-denomination currencies use proportionate bands. Donors may still enter any positive amount. Phone and Mobile Money fields display the selected country’s international dialing prefix as a fixed prefix, such as `+233` for Ghana, and the donor enters the remaining digits.
 
 ## One-time donation and returning donor details
 
 The one-time donation journey remains amount, details and payment. A signed-in returning donor’s stored identity is applied automatically on the details step. Do not show Edit saved details or an additional saved-details selector inside that flow. Guests may sign in, identify the donation with an email BENMP ID, or provide first-time name, email and phone details.
+
+On the first donation screen, the main page heading is **Give your donation**. Do not repeat **Your donation** inside the form card, and do not show a `01 / 03`, `02 / 03` or `03 / 03` counter badge. The three-step navigation remains the visible progress indicator.
 
 ## BENMP partner registration
 
