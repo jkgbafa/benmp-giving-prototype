@@ -1382,3 +1382,17 @@ Keep the homepage header’s layout height unchanged. Extend only its visual bac
 ## Earlier header fade
 
 Match the approved homepage reference by beginning the header-to-video transparency transition earlier. Hold the solid header background only through approximately 18–20%, then fade continuously through 100% of the overlay.
+
+# 42. New-Donor Church Information — 24 September 2026
+
+When an email is not matched to an existing BENMP profile, reveal **Full name**, **Phone / WhatsApp**, and a searchable **Church** field on the same details screen. Build the church list from the 52 denomination names supplied in the `all UD logos/Transparent PNGs` folder. Use names only in the form to keep it clean and fast.
+
+The Church list begins in this exact order:
+
+1. Other
+2. None
+3. First Love Church
+4. Love First
+5. All supplied UD denomination names
+
+Selecting **Other** immediately reveals a required **Church name** field. Selecting **None** is a valid response. Require new donors to choose one listed value before continuing to Payment.
