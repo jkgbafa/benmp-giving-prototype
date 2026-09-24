@@ -10,8 +10,8 @@
   --ink: #172436;
   --muted: #667487;
   --line: #dfe5ed;
-  --blue: #0969d7;
-  --tint: #eaf3ff;
+  --blue: #e97817;
+  --tint: #fff1e3;
   --success: #207750;
   --danger: #b92e42;
   --shadow: 0 18px 65px #13243c06;
@@ -325,6 +325,25 @@ footer button {
   color: var(--ink);
   min-height: 49px;
   font-size: 16px;
+}
+.country-picker {
+  position: relative;
+}
+.country-picker .field {
+  width: 100%;
+  padding-right: 48px;
+}
+.country-picker > span {
+  position: absolute;
+  right: 17px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--blue);
+  font-size: 23px;
+  pointer-events: none;
+}
+.country-native {
+  display: none;
 }
 .field::placeholder {
   color: #8a96a6;
@@ -881,8 +900,8 @@ footer button {
   --ink: #eef4fa;
   --muted: #a8b8cb;
   --line: #344457;
-  --blue: #70b6ff;
-  --tint: #223d58;
+  --blue: #ffad5a;
+  --tint: #4a321f;
   --shadow: 0 18px 65px #0001;
   background: var(--bg);
   color: var(--ink);
@@ -1114,7 +1133,7 @@ footer button {
   color: rgba(255, 255, 255, 0.9);
 }
 .hero-cinematic h1 span {
-  color: #88c7ff;
+  color: #f28c28;
 }
 .hero-cinematic .secondary {
   background: rgba(255, 255, 255, 0.93);
@@ -1300,6 +1319,15 @@ footer button {
 }
 .hero.hero-cinematic h1 span {
   color: #f28c28;
+}
+.hero.hero-cinematic .primary {
+  background: #f28c28;
+  border-color: #f28c28;
+  color: #17120d;
+}
+.hero.hero-cinematic .primary:hover {
+  background: #ff9d3d;
+  border-color: #ff9d3d;
 }
 .hero.hero-cinematic .eyebrow {
   color: #fff;

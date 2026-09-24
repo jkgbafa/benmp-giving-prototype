@@ -5,10 +5,10 @@ const page=await browser.newPage({viewport:{width:1440,height:1000}});const erro
 await page.goto('http://localhost:4173');await page.evaluate(()=>localStorage.clear());await page.reload();
 await page.screenshot({path:'/tmp/benmp-home.png',fullPage:true});
 await page.locator('[data-action="start"]').click();
-await page.locator('#country').waitFor();
+await page.locator('#country-search').waitFor();
 if(await page.locator('#country option').count()!==243)throw Error('Country list incomplete or restricted entries visible');
 for(const code of ['CU','IR','KP','SY','RU','BY'])if(await page.locator(`#country option[value=\"${code}\"]`).count())throw Error(`Restricted country offered: ${code}`);
-await page.locator('#amount').fill('234.56');await page.locator('#country').selectOption('KE');
+await page.locator('#amount').fill('234.56');await page.locator('#country-search').fill('Kenya');
 await page.locator('#giving-form button[type="submit"]').click();
 await page.locator('#name').fill('Demo Partner');await page.locator('#email').fill('demo@example.com');await page.locator('#phone').fill('0700000000');await page.locator('#giving-form button[type="submit"]').click();
 if(!await page.getByText('M-PESA',{exact:true}).isVisible()||!await page.getByText('Airtel Money',{exact:true}).isVisible())throw Error('Kenya routing missing');
@@ -20,7 +20,7 @@ await page.locator('[data-action="dashboard"]').click();await page.waitForURL('*
 await page.locator('#signin').click();await page.locator('#login-entry').fill('anything');await page.locator('#login-form button[type="submit"]').click();await page.locator('[data-action="finish-login"]').click();
 await page.getByRole('heading',{name:'Welcome, Joshua GBAFA'}).waitFor();
 await page.goto('http://localhost:4173/#home');await page.locator('[data-action="partner"]').click();
-await page.locator('[data-set="kind"][data-value="organization"]').click();await page.locator('#country').selectOption('US');await page.locator('#amount').fill('300');await page.locator('#giving-form button[type="submit"]').click();
+await page.locator('[data-set="kind"][data-value="organization"]').click();await page.locator('#country-search').fill('United States');await page.locator('#amount').fill('300');await page.locator('#giving-form button[type="submit"]').click();
 await page.locator('#org').fill('Grace Outreach Church');await page.locator('#orgEmail').fill('finance@example.com');await page.locator('#address').fill('Demo address');await page.locator('[name="authorized"]').check();await page.locator('#giving-form button[type="submit"]').click();
 await page.locator('[data-method="card"]').click();await page.locator('[name="mandate"]').check();await page.locator('#giving-form button[type="submit"]').click();await page.waitForURL('**/#result');
 await page.locator('[data-action="dashboard"]').click();await page.locator('[data-tab="plans"]').click();await page.locator('[data-action="pause-plan"]').click();await page.locator('[data-action="resume-plan"]').click();await page.locator('[data-action="edit-plan"]').click();await page.locator('#plan-amount').fill('400');await page.locator('#plan-form button[type="submit"]').click();await page.locator('[data-action="run-plan"]').click();
@@ -33,5 +33,5 @@ await page.goto('http://localhost:4173/#give');await page.screenshot({path:'/tmp
 await page.setViewportSize({width:390,height:844});await page.goto('http://localhost:4173/#home');await page.screenshot({path:'/tmp/benmp-mobile.png',fullPage:true});
 if(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth))throw Error('Mobile overflow');
 await page.locator('#appearance').click();if(await page.locator('body').evaluate(b=>b.classList.contains('dark')))throw Error('Light mode toggle failed');
-console.log(JSON.stringify({passed:['243 available countries; restricted countries omitted','custom amount','Kenya local methods','guest gift','permissive demo sign-in','organization monthly gift','pause/resume/edit/run monthly plan','message compose and reply','reload persistence','direct dark/light toggle and mobile layout'],errors}));
+console.log(JSON.stringify({passed:['243 available countries; restricted countries omitted','searchable country and currency picker','custom amount','Kenya local methods','guest donation','permissive demo sign-in','organization monthly donation','pause/resume/edit/run monthly plan','message compose and reply','reload persistence','direct dark/light toggle and mobile layout'],errors}));
 await browser.close();if(errors.length)process.exit(1);
