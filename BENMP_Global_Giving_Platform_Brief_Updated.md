@@ -1,4 +1,4 @@
-> **Current design decision — 24 September 2026:** The interactive demo opens on a “Beautiful. Exciting. Nice. Move.” hero with **Give**, **Become a BENMP partner**, and **Sign in**. This replaces the earlier payment-first opening requirement. See section 35 for the latest demo behavior and production boundaries.
+> **Current design decision — 24 September 2026:** The web app opens on the three-line hero **Bring / Salvation / To The Multitudes**, with **Salvation** highlighted in orange. **Give**, **Become a BENMP partner**, and passwordless **Sign in** are immediately available. See sections 37–38 for the latest interaction and presentation decisions.
 
 # BENMP Global Giving Platform
 ## Product, Payments, Data & Dashboard Brief
@@ -1311,3 +1311,21 @@ My Giving includes a Giving statement generator above Giving history. The donor 
 The PDF includes the BENMP logo, partner name and BENMP ID, statement period, confirmed-donation count, totals separated by currency, and the matching donation history with date, reference, country, payment method, status and amount. Long histories continue across multiple numbered pages. Only confirmed donations contribute to totals, while the history can show other statuses for completeness.
 
 Email delivery remains simulated in the browser. The Messages preview shows the generated statement as a downloadable attachment. A production release requires a server-side PDF store or regeneration endpoint, authenticated authorization checks, an email provider, delivery tracking and retention rules.
+
+# 38. Presentation-Ready Product Experience — 24 September 2026
+
+The review build must read and behave like the finished BENMP product. Do not display labels such as “demo,” “simulation,” “sample,” “prototype,” “no money will be taken,” or similar implementation disclaimers in the web interface, receipts or giving statements. Keep integration boundaries documented internally and replace all temporary receiving-account details before live payment processing.
+
+## Checkout and payment result
+
+The visible checkout journey always completes successfully for the presentation. Remove the successful/pending/failed selector from the payment screen. After payment, show a green circular confirmation treatment with a checkmark and the status **Successful**. Preserve the production status styles for asynchronous results: pending uses a yellow icon background and failed uses a red icon background.
+
+Card checkout shows editable card number, name on card, expiration, security code and billing postal code fields. Apple Pay shows the donation amount, a black Apple Pay action and device-confirmation guidance; selecting it completes the donation and opens the successful receipt screen. Bank debit presents account-holder, bank, routing/sort-code and account-number or IBAN fields. PayPal, QR and local-payment panels use direct customer-facing approval language.
+
+## Receipts, statements and messages
+
+The donation receipt is a clean branded PDF with the BENMP logo, confirmed status, official reference, partner details, amount, country, payment method and frequency. It contains no presentation disclaimer. Giving statements use the same branded document style and include confirmed donations in totals. Email, SMS, WhatsApp and in-app communication screens use final product labels such as **Inbox**, **Compose message** and **Send reminder**.
+
+## Implementation boundary
+
+The hosted presentation stores state in the browser and uses permissive local interactions so reviewers can complete every flow. A production launch still requires live payment, identity, email, SMS and WhatsApp integrations; verified BENMP receiving accounts; secure server-side records; compliance screening; and approved legal and privacy documentation. These requirements belong in implementation documentation and must not interrupt the donor-facing journey with prototype copy.
