@@ -22,6 +22,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Version browser assets for this deployment
+        run: |
+          node <<'JS'
+          const fs = require('node:fs');
+          const file = 'dist/index.html';
+          const version = process.env.GITHUB_SHA;
+          const html = fs.readFileSync(file, 'utf8').replace(
+            /(style\.css|app\.js)(?:\?[^"\s]*)?/g,
+            (_, asset) => `${asset}?v=${version}`
+          );
+          fs.writeFileSync(file, html);
+          JS
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
