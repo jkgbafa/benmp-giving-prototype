@@ -1,13 +1,37 @@
-# BENMP interactive prototype
+# BENMP Global Giving Platform
 
-Browser-local demonstration. No real payments, sign-in emails or external messages are sent. Use sample information.
+Interactive frontend prototype for BENMP and the Healing Jesus Campaign.
 
-Features: hero with Give and Become a BENMP partner; 243 available countries/territories; Cuba, Iran, North Korea, Syria, Russia and Belarus are omitted and illustrative local payment routes; custom amounts/currencies; individual and organization gifts; monthly plans; saved/email-only/first-time details; permissive Joshua GBAFA demo sign-in; received/pending/failed payment states; downloadable acknowledgments and CSV; edit/pause/resume/cancel monthly plans; simulated installments and reminders; country totals separated by currency; message previews, replies and notification preferences; light, dark and extra-simple modes.
+- Live preview: https://jkgbafa.github.io/benmp-giving-prototype/
+- Product brief: [`BENMP_Global_Giving_Platform_Brief_Updated.md`](BENMP_Global_Giving_Platform_Brief_Updated.md)
+- Project handover: [`HANDOVER.md`](HANDOVER.md)
+- Hostinger deployment: [`HOSTINGER_DEPLOYMENT.md`](HOSTINGER_DEPLOYMENT.md)
 
-Run locally: `python3 -m http.server 4173 --directory dist`. No build step. Sites identity is stored in .openai/hosting.json.
+## Run locally
 
-Browser checks passed: all-country selection, Kenya/Nigeria routing, custom amounts, all three identity paths, organization monthly gifts, pause/resume/edit/run/cancel plans, reminder mode, payment failures/retries and pending confirmation, receipts/CSV downloads, messages/replies, persistence after reload, reset, mobile layout and appearance modes. No runtime errors were observed. Optional native WebMCP validation was unavailable in the installed Chrome; helpers are feature-detected and ordinary interaction does not depend on them.
+```bash
+python3 -m http.server 4173 --directory dist
+```
 
-Production boundary: all records stay in this browser’s localStorage. Permissive sign-in is a demo feature, not authentication. Country methods are illustrative, not certified live availability. Production needs provider integrations, verified accounts, server records, organization permissions, mandate handling, and country/currency eligibility enforcement. No production services are connected.
+Open `http://localhost:4173/#home`.
 
-See BENMP_Global_Giving_Platform_Brief_Updated.md for design decisions and implementation requirements.
+There is no build step. The deployable static site is in `dist/`.
+
+## Verify
+
+With Playwright installed and the local server running:
+
+```bash
+node qa.mjs
+node qa-states.mjs
+```
+
+## Deploy
+
+GitHub Pages deploys `dist/` automatically after a push to `main`.
+
+For Hostinger, upload the **contents** of `dist/` to `public_html`. See [`HOSTINGER_DEPLOYMENT.md`](HOSTINGER_DEPLOYMENT.md) for backup, upload, cache and rollback steps.
+
+## Production boundary
+
+This repository is an interactive static prototype. Browser state is stored in `localStorage`. Real authentication, payment processing, messaging, databases, webhooks and compliance controls must be implemented on a secure backend before accepting live donations.
